@@ -1,6 +1,7 @@
 class JobListingsController < ApplicationController
 
   def index
+    # byebug
     @job_listings = JobListing.all
   end
 

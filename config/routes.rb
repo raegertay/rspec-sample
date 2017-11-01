@@ -8,6 +8,6 @@ Rails.application.routes.draw do
 
   resources :job_listings
 
-  resources :penguin
+  resources :penguins
 
 end

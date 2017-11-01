@@ -30,7 +30,8 @@ class PenguinsController < ApplicationController
     if @penguin.update(penguin_params)
       redirect_to penguins_path
     else
-      redirect_to penguins_path, flash[:error] = 'Failed to create penguin'
+      flash[:error] = 'Failed to create penguin'
+      redirect_to penguins_path
     end
   end
 
@@ -47,7 +48,7 @@ class PenguinsController < ApplicationController
   end
 
   def penguin_params
-    params.require(:penguin).permit(:head, :body, :foot)
+    params.require(:penguin).permit(:head, :hand, :foot)
   end
 
 end
